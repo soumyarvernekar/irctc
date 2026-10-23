@@ -8,9 +8,10 @@ jobs:
   build-war:
     runs-on: ubuntu-latest
     steps:
-     -  uses:  actions/checkout@v4
-     -  uses:  actions/setup-java@v4
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
         with:
-         java-versions: '17'
-         distributions:  'temurin'
-     -  run: mvn clean package
+          java-version: '17'
+          distribution: 'temurin'
+      - run: mvn clean package
+
